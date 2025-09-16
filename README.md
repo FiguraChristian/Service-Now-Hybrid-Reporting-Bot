@@ -27,6 +27,16 @@ Die E-Mail kommt korrekt mit der Rechnung im Anhang beim Empfänger an. Der Proz
 <img width="1405" height="738" alt="Geöffneter Anhang der E-Mail" src="https://github.com/user-attachments/assets/a39af396-ccf0-4360-8b51-2504ca0b2149" />
 
 
-## 🛠️ Verwendete Technologien
+Sequenz UiPath Studio:
+
+<img width="1233" height="1510" alt="image" src="https://github.com/user-attachments/assets/c7e201a6-bb5e-4980-9cb8-f198564d04ef" />
+<img width="1233" height="1510" alt="image" src="https://github.com/user-attachments/assets/2adf61c7-03b0-45e4-a768-503f63b2dd97" />
+<img width="982" height="1263" alt="image" src="https://github.com/user-attachments/assets/54e335c0-70e2-4c07-b81f-892b9208ac89" />
+
+
+
+
+
+## Verwendete Technologien
 - **UiPath Studio**
 - **VB.NET**
