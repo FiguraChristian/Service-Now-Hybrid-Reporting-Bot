@@ -8,17 +8,17 @@ Die RPA Software UiPath nutzt Powershell für den Aufruf des Python ETL Skriptes
 
 # Datenextraktion 
 
-## Incident-Modul:
-<img width="1918" height="1075" alt="image" src="https://github.com/user-attachments/assets/179c45fe-7698-4b89-bd80-75b531b7842e" />
+## Incident extract:
+<img width="1598" height="896" alt="image" src="https://github.com/user-attachments/assets/d82c611e-1b31-475c-b43c-16e58eddaa1d" />
 
-## Problem-Modul:
-<img width="1920" height="1002" alt="image" src="https://github.com/user-attachments/assets/08aa25f4-eab2-4513-a5df-262a2b7f93b6" />
+## Problem extract:
+<img width="1600" height="835" alt="image" src="https://github.com/user-attachments/assets/9db375c6-27b3-4db8-ae57-f0e4c3432149" />
 
-## Change-Modul:
-<img width="1920" height="998" alt="image" src="https://github.com/user-attachments/assets/600ae01a-44dd-47e7-aca3-f2124a46b979" />
+## Change extract:
+<img width="1600" height="832" alt="image" src="https://github.com/user-attachments/assets/057b59c9-9f06-45e6-87fc-d7f88bbfe9ff" />
 
-## Request-Modul:
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c4970363-e3c5-4a94-8de7-f6c4cc57e2a4" />
+## Request extract:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/ab88054a-3cb3-4f33-9554-331e8a1a72a5" />
 
 
 
