@@ -1,47 +1,76 @@
-Dieses Projekt wurde mit UIPath entwickelt.
+# ServiceNow ITSM Reporting
+
+## Projektziel:
+Ein automatisiertes ETL-Tool (Extract, Transform, Load), mit dem man die Daten Incident, Problem, Change und Request aus der ServiceNow REST API extrahiert, aufbereitet und als Excel File für Reporting-Zwecke speichert.
+
+Die RPA Software UiPath nutzt Powershell für den Aufruf des Python ETL Skriptes. Die Reports werden von UiPath automatisiert per Mail versendet.
 
 
-### Der Prozess im Detail:
+# Datenextraktion 
 
-**1. Die Ausgangssituation: Unversendete Rechnungen**
-Der Bot startet mit einem Ordner, der verschiedene Textdateien enthält, darunter auch die zu verarbeitenden Rechnungen.
+## Incident-Modul:
+<img width="1918" height="1075" alt="image" src="https://github.com/user-attachments/assets/179c45fe-7698-4b89-bd80-75b531b7842e" />
 
-<img width="1270" height="1360" alt="image" src="https://github.com/user-attachments/assets/fcc9abec-37f4-4629-887e-0504e8a810da" />
+## Problem-Modul:
+<img width="1920" height="1002" alt="image" src="https://github.com/user-attachments/assets/08aa25f4-eab2-4513-a5df-262a2b7f93b6" />
 
-**2. Interaktive Konfiguration**
-Der Bot fragt den Benutzer zunächst, welcher Ordner überwacht und welcher Empfänger für die E-Mails verwendet werden soll. Dies macht den Prozess flexibel und wiederverwendbar.
+## Change-Modul:
+<img width="1920" height="998" alt="image" src="https://github.com/user-attachments/assets/600ae01a-44dd-47e7-aca3-f2124a46b979" />
 
-*Auswahl des Ordners:*
-<img width="1073" height="726" alt="Dialog zur Ordnerauswahl" src="https://github.com/user-attachments/assets/8e6aa8f0-5005-48e3-addc-a2ab14b0124d" />
-
-*Eingabe des Empfängers:*
-<img width-="530" height="274" alt="Dialog zur Empfängereingabe" src="https://github.com/user-attachments/assets/e989760c-5f8a-471a-a306-fa61ff4dff43" />
-
-**3. Automatischer E-Mail-Versand**
-Der Bot versendet die gefundenen Rechnungsdateien als Anhang. Jede E-Mail wird mit einem dynamischen Betreff und Text versehen.
-
-*Bestätigung im Postausgang:*
-<img width="1581" height="266" alt="Gesendete E-Mail im Postausgang" src="https://github.com/user-attachments/assets/f703a1d2-f9b5-45c5-b318-89ce36fe687a" />
-
-**4. Das Ergebnis: Erfolgreiche Zustellung**
-Die E-Mail kommt korrekt mit der Rechnung im Anhang beim Empfänger an. Der Prozess ist erfolgreich abgeschlossen.
-
-<img width="766" height="363" alt="Empfangene E-Mail im Posteingang" src="https://github.com/user-attachments/assets/c5a6d041-a0c7-4eab-ac83-3c5df57e23de" />
-<img width="1405" height="738" alt="Geöffneter Anhang der E-Mail" src="https://github.com/user-attachments/assets/a39af396-ccf0-4360-8b51-2504ca0b2149" />
+## Request-Modul:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c4970363-e3c5-4a94-8de7-f6c4cc57e2a4" />
 
 
 
+# Dieses Tool bietet folgenden Mehrwert:
 
-Aufbau UiPath Studio:
-
-<img width="989" height="1342" alt="image" src="https://github.com/user-attachments/assets/ac78e130-9741-4a35-bdf4-32a7c5f60b17" />
-<img width="1233" height="1510" alt="image" src="https://github.com/user-attachments/assets/4e4cddc1-71c1-4fe8-be02-41caddfb117e" />
-<img width="982" height="1263" alt="image" src="https://github.com/user-attachments/assets/54e335c0-70e2-4c07-b81f-892b9208ac89" />
-
-
-
+- Zeitersparnis: Vollständige Automatisierung des Reportings – ersetzt täglich wiederkehrende, manuelle Export- und Copy-Paste-Arbeiten
+- Fehlereliminierung: 100% Datenkonsistenz durch maschinelle Verarbeitung (vermeidet typische "Flüchtigkeitsfehler" bei der manuellen Übertragung)
+- Sicherheit & Compliance: Sensible Zugangsdaten werden strikt vom Code getrennt (.env) und sicher verarbeitet
+- Hybride Effizienz: Kombiniert die Stärken von UiPath mit der Performance von Python/Pandas (schnelle Datenverarbeitung großer Datensätze)
+- Business Ready: Die generierte .xlsx ist sauber formatiert und kann direkt für Pivot-Tabellen oder PowerBI Dashboards weiterverwendet werden.
 
 
-## Verwendete Technologien
-- **UiPath Studio**
-- **VB.NET**
+# Architektur:
+
+- UiPath Studio: Prozesstrigger und Versand der Ergebnis-E-Mails (GSuite/SMTP Integration)
+- Python 3.13: Logik für API-Abfragen, Datenverarbeitung und Report-Erstellung
+- PowerShell: "Bridge"-Technologie, um das Python-Environment aus UiPath heraus sicher zu starten und Umgebungsvariablen zu laden
+- ServiceNow REST API: Quelle der ITSM-Daten
+
+# Python Bibliotheken:
+- requests - Handling der HTTP GET Requests und Authentifizierung.
+- pandas - Datenmanipulation, Filterung und Erstellung des DataFrames.
+- openpyxl - Engine zum Schreiben und Formatieren nativer .xlsx Dateien.
+- python-dotenv - Nutzung von Umgebungsvariablen (.env) für die Trennung von Code und Credentials.
+
+
+# Workflow / Funktionsweise
+
+1. Orchestrierung (UiPath):
+   Der UiPath-Roboter startet den Prozess und führt das Python-Skript mittels PowerShell aus.
+   
+3. Authentifizierung (Python):
+   Das Skript lädt Credentials sicher aus einer lokalen .env Datei (nicht im Code hardcodiert) und baut eine authentifizierte Session zur ServiceNow-Instanz auf
+   
+5. API Request (Python):
+   Es sendet GET-Requests an die definierten ServiceNow Table Endpoints (Incident, Problem, Change und Request), um die aktuellen Daten abzurufen.
+   
+6. Transformation (Pandas):
+   Die rohen JSON-Antworten werden bereinigt. Irrelevante System-Felder werden verworfen, Zeitstempel formatiert und die Daten in eine saubere Struktur gebracht.
+
+7. Export & Verteilung (Hybrid):
+   Python: Speichert die bereinigten Daten als .xlsx Datei im Output-Ordner.
+   UiPath: Erkennt die neu erstellte Datei, hängt sie an eine E-Mail an und versendet den Report an den Verteiler.
+
+
+# Weitere Screenshots
+
+<img width="540" height="693" alt="image" src="https://github.com/user-attachments/assets/7afa9506-a010-4ec7-808d-17f61cfacbc2" />
+<img width="1368" height="564" alt="image" src="https://github.com/user-attachments/assets/f227d2f7-122e-4ff6-b535-ee632ef93e9f" />
+<img width="1348" height="523" alt="image" src="https://github.com/user-attachments/assets/1fd8106c-23fd-4173-ba88-14dc0168715e" />
+<img width="1136" height="566" alt="{4314862D-14E6-4EED-9D50-88710F747230}" src="https://github.com/user-attachments/assets/0df1d2e9-fe66-4c82-beac-d989f32f8acd" />
+
+
+
+
