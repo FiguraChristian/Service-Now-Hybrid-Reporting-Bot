@@ -156,7 +156,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="1d9352fa-83f1-43f3-bede-4465d6a82c65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Report: &quot; + CurrentFile.Name]" To="[New String(){&quot;christian.figura92@gmail.com&quot;}]" UseConnectionService="True">
+              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="1d9352fa-83f1-43f3-bede-4465d6a82c65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Report: &quot; + CurrentFile.Name]" To="[New String(){&quot;christian.figura92@gmail.com&quot;}]" UseConnectionService="True">
                 <uga:SendEmailConnections.ArgumentAttachments>
                   <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                     <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(CurrentFile.FullName)]</InArgument>
@@ -171,6 +171,9 @@
                     </usau:BackupSlot.BackupValues>
                   </usau:BackupSlot>
                 </uga:SendEmailConnections.AttachmentsBackup>
+                <uga:SendEmailConnections.Body>
+                  <InArgument x:TypeArguments="x:String" />
+                </uga:SendEmailConnections.Body>
                 <uga:SendEmailConnections.InputTypeBackup>
                   <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
                     <usau:BackupSlot.BackupValues>
