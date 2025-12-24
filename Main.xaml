@@ -114,7 +114,7 @@
       <AssemblyReference>System.Management.Automation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="640,980.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104.4,1068.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="518,958" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="516.8,1045.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Default="C:\Users\chris\Documents\RPADevelopment\Challenge" Name="SourcePath" />
         <Variable x:TypeArguments="x:String" Default="C:\Users\chris\Documents\RPADevelopment\ITSMReportingBot" Name="Path" />
@@ -133,7 +133,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="Start-Process -FilePath 'C:\Users\chris\AppData\Local\Programs\Python\Python313\python.exe' -ArgumentList 'C:\Users\chris\Documents\UiPath\PythonIntegration\PythonWorker\main.py' -WorkingDirectory 'C:\Users\chris\Documents\UiPath\PythonIntegration\PythonWorker' -Wait" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="484,112.66666666666667" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" IsScript="True" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="Start-Process -FilePath 'C:\Users\chris\AppData\Local\Programs\Python\Python313\python.exe' -ArgumentList 'C:\Users\chris\Documents\UiPath\PythonIntegration\PythonWorker\main.py' -WorkingDirectory 'C:\Users\chris\Documents\UiPath\PythonIntegration\PythonWorker' -Wait" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="483.2,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" IsScript="True" PowerShellProcess="PowerShellCore">
         <ui:InvokePowerShell.Parameters>
           <scg:Dictionary x:TypeArguments="x:String, InArgument" />
         </ui:InvokePowerShell.Parameters>
@@ -141,7 +141,7 @@
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokePowerShell.PowerShellVariables>
       </ui:InvokePowerShell>
-      <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.xlsx" Folder="C:\Users\chris\Documents\RPADevelopment\ITSMReportingBot" sap:VirtualizedContainerService.HintSize="484,762.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.xlsx" Folder="C:\Users\chris\Documents\RPADevelopment\ITSMReportingBot" sap:VirtualizedContainerService.HintSize="483.2,850.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -150,13 +150,13 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="450,470.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,564" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="1d9352fa-83f1-43f3-bede-4465d6a82c65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,410.6666666666667" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Report: &quot; + CurrentFile.Name]" To="[New String(){&quot;christian.figura92@gmail.com&quot;}]" UseConnectionService="True">
+              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="1d9352fa-83f1-43f3-bede-4465d6a82c65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Report: &quot; + CurrentFile.Name]" To="[New String(){&quot;christian.figura92@gmail.com&quot;}]" UseConnectionService="True">
                 <uga:SendEmailConnections.ArgumentAttachments>
                   <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                     <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(CurrentFile.FullName)]</InArgument>
@@ -171,9 +171,6 @@
                     </usau:BackupSlot.BackupValues>
                   </usau:BackupSlot>
                 </uga:SendEmailConnections.AttachmentsBackup>
-                <uga:SendEmailConnections.Body>
-                  <InArgument x:TypeArguments="x:String" />
-                </uga:SendEmailConnections.Body>
                 <uga:SendEmailConnections.InputTypeBackup>
                   <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
                     <usau:BackupSlot.BackupValues>
