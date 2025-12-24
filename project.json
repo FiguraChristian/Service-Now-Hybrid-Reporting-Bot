@@ -1,9 +1,10 @@
 {
-  "name": "How2ReadFiles",
+  "name": "ITSM Reporting Bot",
   "projectId": "9036a126-47cd-45f6-a3d6-47ac493f0439",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.GSuite.Activities": "[3.5.11]",
     "UiPath.Mail.Activities": "[2.4.10]",
     "UiPath.MicrosoftOffice365.Activities": "[3.4.10]",
     "UiPath.System.Activities": "[25.8.0]"
