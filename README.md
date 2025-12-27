@@ -8,6 +8,9 @@ Die RPA Software UiPath nutzt Powershell für den Aufruf des Python ETL Skriptes
 
 # Datenextraktion 
 
+## Screenshot Mailexport
+<img width="1348" height="523" alt="image" src="https://github.com/user-attachments/assets/1fd8106c-23fd-4173-ba88-14dc0168715e" />
+
 ## Incident extract:
 <img width="1598" height="896" alt="image" src="https://github.com/user-attachments/assets/d82c611e-1b31-475c-b43c-16e58eddaa1d" />
 
@@ -68,7 +71,6 @@ Die RPA Software UiPath nutzt Powershell für den Aufruf des Python ETL Skriptes
 
 <img width="540" height="693" alt="image" src="https://github.com/user-attachments/assets/7afa9506-a010-4ec7-808d-17f61cfacbc2" />
 <img width="1368" height="564" alt="image" src="https://github.com/user-attachments/assets/f227d2f7-122e-4ff6-b535-ee632ef93e9f" />
-<img width="1348" height="523" alt="image" src="https://github.com/user-attachments/assets/1fd8106c-23fd-4173-ba88-14dc0168715e" />
 <img width="1136" height="566" alt="{4314862D-14E6-4EED-9D50-88710F747230}" src="https://github.com/user-attachments/assets/0df1d2e9-fe66-4c82-beac-d989f32f8acd" />
 
 
